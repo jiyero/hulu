@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import HighlightOption from "../components/HighlightOption";
 import { highlightData } from "../data/highlightData";
 import "../styles/Highlights.scss";
+import useHighlightAnimation from "../hooks/useHighlightAnimation";
 
 const Highlights = () => {
   const [activeKey, setActiveKey] = useState("sports");
-  const { title, description, background } = highlightData[activeKey];
+  const { title, description, background, logos } = highlightData[activeKey];
+  const animateContent = useHighlightAnimation(activeKey);
 
   return (
     <section
@@ -25,9 +27,18 @@ const Highlights = () => {
           ))}
         </div>
 
-        <div className="highlight-content">
+        <div
+          className={`highlight-content ${animateContent ? "fade-in-up" : ""}`}
+        >
           <h2>{title}</h2>
           <p>{description}</p>
+          <div className="logo-circles">
+            {logos.map((logo, index) => (
+              <div className="logo-circle" key={index}>
+                <img src={logo} alt={`logo-${index}`} />
+              </div>
+            ))}
+          </div>
           <p className="disclaimer">
             Live TV plan required. Regional restrictions, blackouts and
             additional terms apply. See details
