@@ -1,0 +1,128 @@
+.plans {
+  background-color: black;
+  color: white;
+  padding: 2rem;
+
+  .top-text {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0.25rem 0;
+    }
+  }
+
+  .plan-dropdown {
+    margin-top: 1rem;
+    text-align: center;
+    border-radius: 36px;
+    overflow: hidden;
+    display: inline-block;
+
+    label {
+      margin-right: 0.5rem;
+    }
+
+    select {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+
+  .plans-table {
+    margin-top: 2rem;
+    overflow-x: auto;
+
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      text-align: center;
+      margin: 0 auto;
+
+      th,
+      td {
+        padding: 1rem;
+        border: 1px solid #555;
+        border-left: none;
+        border-right: none;
+        border-top: none;
+      }
+
+      th:first-child,
+      td:first-child {
+        text-align: left;
+      }
+
+      img {
+        max-width: 100px;
+        height: auto;
+      }
+    }
+
+    .disclaimer {
+      width: 50%;
+      margin: 1.3rem auto 0 auto;
+      font-size: 0.65rem;
+      color: #ccc;
+      text-align: left;
+
+      p {
+        line-height: 1;
+        margin: 0.2rem 0;
+      }
+    }
+
+    .addons-section {
+      margin-top: 2rem;
+
+      .addons-wrapper {
+        width: 50%;
+        margin: 0 auto;
+        text-align: left;
+
+        .toggle-button {
+          background-color: black;
+          color: white;
+          padding: 0.6rem 1.2rem;
+          font-size: 1rem;
+          border: none;
+          cursor: pointer;
+          display: block;
+          margin: 0 auto 1rem auto;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          text-align: center;
+
+          th,
+          td {
+            padding: 1rem;
+            border: 1px solid #555;
+            border-left: none;
+            border-right: none;
+            border-top: none;
+          }
+
+          td:first-child {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

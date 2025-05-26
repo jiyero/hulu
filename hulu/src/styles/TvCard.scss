@@ -1,0 +1,41 @@
+.tv-card {
+  position: relative;
+  width: 295px;
+  height: 451px;
+  overflow: hidden;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  .tv-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    display: block;
+  }
+
+  .tv-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    pointer-events: none; // makes sure overlay doesn’t block interactions
+
+    .tv-card-description {
+      font-size: 1rem;
+      margin: 0 0 -1rem 0; // Add a small bottom margin
+    }
+
+    .tv-card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}

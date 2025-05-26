@@ -1,0 +1,98 @@
+.highlights {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: top;
+  overflow: hidden;
+}
+
+.highlight-tab-container {
+  width: 500px;
+  height: 400px;
+  padding-right: 40rem;
+}
+
+.highlight-content {
+  color: white;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  .disclaimer {
+    font-size: 0.7rem;
+    color: gray;
+  }
+}
+
+.highlight-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.highlight-options button {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #cccccc;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: border-bottom 0.3s ease, color 0.3s ease;
+}
+
+.highlight-options button.active {
+  color: white;
+  border-bottom: 2px solid white;
+}
+
+.highlight-options button:hover {
+  color: white;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.logo-circles {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.logo-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  img {
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+  }
+}
