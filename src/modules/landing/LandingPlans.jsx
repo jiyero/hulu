@@ -109,9 +109,9 @@ const Plans = () => {
           {currentPlan.addons && (
             <div className={styles["addons-wrapper"]}>
               {showAddons && (
-                <div clasName="addons-container">
+                <div className="addons-container">
                   <h2>Available Add-ons</h2>
-                  <table className={styles["addons-table"]}>
+                  <table className={styles["addons-desktop"]}>
                     <tbody>
                       <tr>
                         <td colSpan="3">
@@ -124,6 +124,25 @@ const Plans = () => {
                         <tr key={index}>
                           <td>{addon.name}</td>
                           <td>{addon.basic}</td>
+                          <td>{addon.premium}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+
+                  <table className={styles["addons-tablet"]}>
+                    <tbody>
+                      <tr>
+                        <td colSpan="3">
+                          Add-ons available at an additional cost.
+                          <br />
+                          Add them up after you sign up for Hulu.
+                        </td>
+                      </tr>
+                      {currentPlan.addons.map((addon, index) => (
+                        <tr key={index}>
+                          <td>{addon.basic}</td>
+                          <td>{addon.name}</td>
                           <td>{addon.premium}</td>
                         </tr>
                       ))}

@@ -88,6 +88,10 @@
     justify-content: center;
     width: 70rem;
 
+    .addons-tablet {
+      display: none;
+    }
+
     .table-tablet {
       display: none;
     }
@@ -151,7 +155,7 @@
         padding-left: 1rem;
       }
 
-      table {
+      .addons-desktop {
         border-collapse: collapse;
         text-align: center;
         margin-left: auto;
@@ -209,17 +213,27 @@
     display: none;
   }
 
+  .addons-desktop {
+    display: none;
+  }
+
   .plans {
     .plans-table {
       width: 100%;
 
       .table-tablet {
         display: flex;
+        align-items: center;
         flex-direction: column;
-        justify-content: center;
 
         th {
           width: 100%;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        .price {
+          width: 19rem;
+          overflow: hidden;
         }
         td {
           border: 1px solid #555;
@@ -244,6 +258,35 @@
         .value-right {
           display: block;
           transform: translateX(-100px);
+        }
+      }
+
+      .addons-wrapper {
+        h2 {
+          text-align: center;
+          padding-left: 0;
+          width: 100%;
+          font-size: 1.5rem;
+        }
+
+        th,
+        td {
+          padding: 1rem;
+          border: 1px solid #555;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+        }
+
+        .addons-tablet {
+          display: table;
+          width: 100%;
+
+          border-collapse: collapse;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          width: 100%;
         }
       }
 
