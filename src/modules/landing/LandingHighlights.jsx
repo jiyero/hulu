@@ -28,15 +28,15 @@ const Highlights = () => {
       className={styles["highlights"]}
       style={{ backgroundImage: `url(${bg})` }}
     >
-      <div className={styles["highlight-tab-container"]}>
-        <div className={styles["highlight-options"]}>
+      <div className={styles["highlights-container"]}>
+        <div className={styles["highlights-container-options"]}>
           {Object.entries(highlightData).map(([key, option]) => (
             <HighlightOption
               key={key}
               label={option.title}
               isActive={activeKey === key}
               onClick={() => setActiveKey(key)}
-              className={`${styles["highlight-button"]} ${
+              className={`${styles["highlights-container-options-button"]} ${
                 activeKey === key ? styles["active"] : ""
               }`}
             />
@@ -44,22 +44,41 @@ const Highlights = () => {
         </div>
 
         <div
-          className={`${styles["highlight-content"]} ${
+          className={`${styles["highlights-container-content"]} ${
             animateContent ? styles["fade-in-up"] : ""
           }`}
         >
-          <h2>{title}</h2>
-          <p>{description}</p>
-          <div className={styles["logo-circles"]}>
+          <h2 className={styles["highlights-container-content-title"]}>
+            {title}
+          </h2>
+          <p className={styles["highlights-container-content-description"]}>
+            {description}
+          </p>
+          <div className={styles["highlights-container-content-logo"]}>
             {logos.map((logo, index) => (
-              <div className={styles["logo-circle"]} key={index}>
-                <img src={logo} alt={`logo-${index}`} />
+              <div
+                className={styles["highlights-container-content-logo-circle"]}
+                key={index}
+              >
+                <img
+                  src={logo}
+                  alt={`logo-${index}`}
+                  className={
+                    styles["highlights-container-content-logo-circle-image"]
+                  }
+                />
               </div>
             ))}
           </div>
-          <p className={styles["disclaimer"]}>
+          <p className={styles["highlights-container-content-disclaimer"]}>
             Live TV plan required. Regional restrictions, blackouts and
-            additional terms apply. See details
+            additional terms apply.
+            <a
+              href="/"
+              className={styles["highlights-container-content-disclaimer-link"]}
+            >
+              See details
+            </a>
           </p>
         </div>
       </div>

@@ -8,37 +8,28 @@
   align-items: center;
   text-align: center;
 
-  .subtitle {
+  &-subtitle {
     color: #00ed82;
     font-weight: bold;
     font-size: 0.9rem;
     letter-spacing: 1px;
     margin-bottom: -1rem;
     padding-top: 0rem;
-
-    @media (max-width: 1280px) {
-      padding-top: 2rem;
-    }
   }
 
-  h2 {
+  &-title {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
 
-  h4 {
-    padding-top: 8rem;
-  }
-
-  .description {
+  &-description {
     max-width: 700px;
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #ccc;
-    padding-bottom: 2rem;
+    color: white;
   }
 
-  .disclaimer {
+  &-disclaimer {
     font-size: 0.6rem;
     padding-bottom: 1rem;
     max-width: max-content;
@@ -46,14 +37,14 @@
     color: gray;
   }
 
-  .channel {
-    text-decoration: underline;
+  &-channel {
     font-weight: bold;
+    color: #ccc;
   }
 }
 
 @media (max-width: 1024px) {
-  h2 {
+  .watch-live-title {
     width: 70%;
   }
 

@@ -2,44 +2,26 @@
   padding: 4rem 2rem;
   background: black;
   color: white;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  .tv-card-list {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    overflow-x: auto;
-    text-align: left;
-  }
-
-  .subtitle {
+  &-subtitle {
     color: #00ed82;
     font-weight: bold;
     font-size: 0.9rem;
     letter-spacing: 1px;
     margin-bottom: -1rem;
-    padding-top: 7rem;
-
-    @media (max-width: 1280px) {
-      padding-top: 2rem;
-    }
+    padding-top: 0rem;
   }
 
-  h2 {
+  &-large-text {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
 
-  h4 {
-    padding-top: 8rem;
-  }
-
-  .description {
+  &-description {
     max-width: 700px;
     font-size: 1.1rem;
     line-height: 1.6;
@@ -47,29 +29,25 @@
     padding-bottom: 2rem;
   }
 
-  .disclaimer {
-    font-size: 0.6rem;
-    padding-bottom: 1rem;
-    max-width: max-content;
-    width: 60%;
-    color: gray;
-  }
-
-  .channel {
-    text-decoration: underline;
-    font-weight: bold;
+  &-card-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    text-align: left;
   }
 }
 
 @media (max-width: 1024px) {
-  h2 {
+  .tv-shows-large-text {
     width: 70%;
   }
 
-  .description {
+  .tv-shows-description {
     width: 100%;
     margin: 0;
-    //spacing of newline
+    line-height: 25px;
   }
 }
 
@@ -80,7 +58,7 @@
       font-size: 2.8rem;
     }
 
-    .description {
+    &-description {
       width: 80%;
     }
   }
@@ -93,12 +71,9 @@
       font-size: 1.8rem;
     }
 
-    .description {
+    &-description {
       width: 100%;
       font-size: 1rem;
     }
-  }
-  .disclaimer {
-    width: 90%;
   }
 }

@@ -15,7 +15,7 @@ export const plansData = {
       "Access to award-winning Hulu Originals",
       "Watch on your favorite devices, including TV, laptop, phone, or tablet",
       "No ads in Hulu streaming library",
-      "No ads on Disney+No ads on Disney+",
+      "No ads on Disney+",
       "Download and watch on Hulu",
       "Download and watch on Disney+",
     ],

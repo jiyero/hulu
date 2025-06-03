@@ -7,56 +7,81 @@
   background-position: top;
   overflow: hidden;
   padding: 2rem;
-}
 
-.highlight-tab-container {
-  width: 500px;
-  height: 400px;
-  padding-right: 40rem;
-}
+  &-container {
+    width: 500px;
+    height: 400px;
+    padding-right: 40rem;
 
-.highlight-content {
-  color: white;
+    &-options {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
 
-  h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+      & button {
+        background: transparent;
+        border: none;
+        border-bottom: px solid transparent;
+        color: #cccccc;
+        padding: 0.5rem 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      & button.active {
+        color: white;
+        border-bottom: 4px solid white;
+      }
+
+      & button:hover {
+        color: white;
+      }
+    }
+
+    &-content {
+      color: white;
+
+      &-title {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+
+      &-description {
+        font-size: 1.3rem;
+      }
+
+      &-logo {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+        &-circle {
+          width: 55px;
+          height: 55px;
+          border-radius: 50%;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          &-image {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+          }
+        }
+      }
+
+      &-disclaimer {
+        font-size: 0.7rem;
+        color: gray;
+
+        &-link {
+          color: gray;
+        }
+      }
+    }
   }
-
-  p {
-    font-size: 1.3rem;
-  }
-
-  .disclaimer {
-    font-size: 0.7rem;
-    color: gray;
-  }
-}
-
-.highlight-options {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.highlight-options button {
-  background: transparent;
-  border: none;
-  border-bottom: px solid transparent;
-  color: #cccccc;
-  padding: 0.5rem 0.5rem;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.highlight-options button.active {
-  color: white;
-  border-bottom: 4px solid white;
-}
-
-.highlight-options button:hover {
-  color: white;
 }
 
 @keyframes fadeInUp {
@@ -72,29 +97,6 @@
 
 .fade-in-up {
   animation: fadeInUp 0.7s ease forwards;
-}
-
-.logo-circles {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.logo-circle {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-
-  img {
-    max-width: 70%;
-    max-height: 70%;
-    object-fit: contain;
-  }
 }
 
 @media (max-width: 1600px) {
@@ -124,37 +126,37 @@
     padding-bottom: 20rem;
   }
 
-  .highlight-content {
-    p {
-      font-size: 0.9rem;
-    }
-  }
-  .highlight-tab-container {
+  .highlights-container {
     padding-right: 0;
     width: 100%;
     max-width: 500px;
     text-align: center;
-  }
 
-  .highlight-options {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+    &-options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
 
-  .logo-circles {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
+    &-content {
+      &-title {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 2rem;
+      }
+      &-description {
+        font-size: 0.9rem;
+      }
 
-  .highlight-content h2 {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 2rem;
+      &-logo {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+    }
   }
 }
 
@@ -165,7 +167,7 @@
 }
 
 @media (max-width: 425px) {
-  .highlight-options {
+  .highlights-container-options {
     width: 400px;
   }
 
@@ -182,12 +184,12 @@
     background-size: 120%;
     padding-bottom: 2rem;
   }
-  .logo-circle {
+  .highlights-container-content-logo-circle {
     width: 40px;
     height: 40px;
   }
 
-  .highlight-options {
+  .highlights-container-options {
     align-items: left;
   }
 }

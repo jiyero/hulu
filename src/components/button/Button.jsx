@@ -1,7 +1,7 @@
 import React from "react";
-import "./Buttons.scss";
+import "./Button.scss";
 
-const Buttons = ({ text, variant }) => {
+const Button = ({ text, variant }) => {
   return (
     <button className={`button ${variant ? `button-${variant}` : ""}`}>
       {text}
@@ -9,4 +9,4 @@ const Buttons = ({ text, variant }) => {
   );
 };
 
-export default Buttons;
+export default Button;

@@ -1,5 +1,5 @@
 .start-building {
-  background: linear-gradient(to top, black, #1ce783);
+  background: linear-gradient(to top, #161a1f, #2aa869);
   color: white;
   font-size: 1.2rem;
   display: flex;
@@ -8,7 +8,7 @@
   align-items: center;
   min-height: 140px;
 
-  p {
+  &-text {
     font-size: 1.2rem;
     font-weight: bold;
   }

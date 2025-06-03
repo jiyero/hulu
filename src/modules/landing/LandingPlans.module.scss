@@ -3,46 +3,52 @@
   color: white;
   padding: 2rem;
 
-  .top-text {
+  &-top-text {
     text-align: center;
     margin-bottom: 2rem;
 
-    h1 {
+    &-title {
       font-size: 2.9rem;
       margin-bottom: 1rem;
     }
 
-    p {
+    &-subtitle {
       font-size: 1rem;
       margin: 0.6rem 0;
     }
-  }
 
-  .plan-dropdown {
-    margin-top: 1rem;
-    text-align: center;
-    border-radius: 36px;
-    overflow: hidden;
-    display: inline-block;
-
-    label {
-      margin-right: 0.5rem;
+    &-switch {
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0.6rem 0;
     }
 
-    select {
-      padding: 0rem 1rem 0rem 1.5rem; // top right left bot
-      font-size: 1rem;
+    &-dropdown {
+      margin-top: 1rem;
+      text-align: center;
       border-radius: 36px;
-      border: none;
-      height: 2.5rem;
-      line-height: 2.5rem;
-      appearance: none;
-      background: white
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='30,50 70,90 110,50' stroke='%23000' stroke-width='15' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
-        no-repeat right 2rem center;
-      background-size: 1rem;
-      color: black;
-      cursor: pointer;
+      overflow: hidden;
+      display: inline-block;
+
+      label {
+        margin-right: 0.5rem;
+      }
+
+      select {
+        padding: 0rem 1rem 0rem 1.5rem; // top right left bot
+        font-size: 1rem;
+        border-radius: 36px;
+        border: none;
+        height: 2.5rem;
+        line-height: 2.5rem;
+        appearance: none;
+        background: white
+          url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolyline points='30,50 70,90 110,50' stroke='%23000' stroke-width='15' fill='none' stroke-linecap='round'/%3E%3C/svg%3E")
+          no-repeat right 2rem center;
+        background-size: 1rem;
+        color: black;
+        cursor: pointer;
+      }
     }
   }
 
@@ -149,6 +155,13 @@
         border-right: none;
         width: 100%;
       }
+
+      .arrow-show {
+        padding-left: 5px;
+      }
+      .arrow-hide {
+        transform: rotate(180deg);
+      }
       h2 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
@@ -185,30 +198,15 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1180px) {
   .plans {
-    padding: 0;
     .plans-table {
-      width: 100%;
-
-      .disclaimer {
-        width: 100%;
-      }
-
-      .addons-wrapper {
-        .toggle-button {
-          width: 100%;
-        }
-
-        table {
-          width: 100%;
-        }
-      }
+      width: 60rem;
     }
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   .table-desktop {
     display: none;
   }
@@ -228,8 +226,8 @@
 
         th {
           width: 100%;
-          padding-left: 2rem;
-          padding-right: 2rem;
+          padding-left: 3.5rem;
+          padding-right: 3.5rem;
         }
         .price {
           width: 19rem;
@@ -247,7 +245,7 @@
         .title {
           display: block;
           transform: translateY(-25px);
-          padding-left: 1rem;
+          padding-left: 4rem;
           width: 25rem;
         }
 
@@ -280,7 +278,6 @@
 
         .addons-tablet {
           display: table;
-          width: 100%;
 
           border-collapse: collapse;
           text-align: center;
@@ -297,20 +294,61 @@
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 838px) {
   .plans {
     .plans-table {
-      th,
-      td {
-        font-size: 0.65rem;
-      }
+      .table-tablet {
+        th {
+          width: 100%;
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        td {
+          border: 1px solid #555;
+          border-left: none;
+          border-right: none;
+          border-top: none;
+          text-align: center;
+        }
+        .title {
+          display: block;
+          transform: translateY(-25px);
+          padding-left: 2rem;
+          width: 20rem;
+        }
 
-      .disclaimer {
-        width: 100%;
-        font-size: 0.5rem;
+        .price {
+          width: 18rem;
+        }
       }
     }
   }
+}
+
+@media (max-widht: 767px) {
+  .plans {
+    padding: 0;
+    // .plans-table {
+    //   .table-tablet {
+    //   }
+    // }
+  }
+}
+
+@media (max-width: 425px) {
+  // .plans {
+  //   .plans-table {
+  //     th,
+  //     td {
+  //       font-size: 0.65rem;
+  //     }
+
+  //     .disclaimer {
+  //       width: 100%;
+  //       font-size: 0.5rem;
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 375px) {

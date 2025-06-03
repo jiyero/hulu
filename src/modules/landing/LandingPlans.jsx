@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { plansData } from "../../data/plansData";
+import arrow from "../../assets/arrow.svg";
 import styles from "./LandingPlans.module.scss";
+import Select from "../../components/select/Select";
 
 const Plans = () => {
   const [selectedPlan, setSelectedPlan] = useState("dh");
@@ -18,22 +20,7 @@ const Plans = () => {
 
   return (
     <section className={styles["plans"]}>
-      <header className={styles["top-text"]}>
-        <h1>Select Your Plan</h1>
-        <p>No hidden fees, equipment rentals, or installation appointments.</p>
-        <p>
-          <strong>Switch plans or cancel anytime.**</strong>
-        </p>
-
-        <div className={styles["plan-dropdown"]}>
-          <select id="plan-select" onChange={handleChange} value={selectedPlan}>
-            <option value="dh">Disney+, Hulu Bundle</option>
-            <option value="dhe">Disney+, Hulu, ESPN+ Bundle</option>
-            <option value="dhm">Disney+, Hulu, Max Bundle</option>
-            <option value="hltv">Hulu + Live TV</option>
-          </select>
-        </div>
-      </header>
+      <Select selectedPlan={selectedPlan} handleChange={handleChange} />
 
       {currentPlan && (
         <div className={styles["plans-table"]}>
@@ -155,7 +142,25 @@ const Plans = () => {
                 className={styles["toggle-button"]}
                 onClick={toggleAddons}
               >
-                {showAddons ? "Hide Add-ons" : "Show Add-ons"}
+                {showAddons ? (
+                  <>
+                    Hide-Addons{" "}
+                    <img
+                      src={arrow}
+                      alt="arrow"
+                      className={styles["arrow-hide"]}
+                    />
+                  </>
+                ) : (
+                  <>
+                    Show-Adons{" "}
+                    <img
+                      src={arrow}
+                      alt="arrow"
+                      className={styles["arrow-show"]}
+                    />
+                  </>
+                )}
               </button>
             </div>
           )}

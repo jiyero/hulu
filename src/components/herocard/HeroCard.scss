@@ -8,118 +8,30 @@
   flex-direction: column;
   align-items: center;
 
-  h2 {
+  &-title {
     font-size: 0.8rem;
     color: #00ed82;
     margin-bottom: 1rem;
   }
 
-  .hero-card-image {
+  &-image {
     width: 200px;
     height: 50px;
     object-fit: contain;
     border-radius: 0.5rem;
   }
 
-  p {
+  &-description {
     margin-top: auto;
     font-size: 1.6rem;
     color: white;
     margin-bottom: 1.5rem;
   }
 
-  .terms {
+  &-terms {
     color: white;
     font-size: 0.7rem;
     text-decoration: underline;
-  }
-
-  &.horizontal {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    text-align: left;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0.5rem 1rem;
-    gap: 1rem;
-
-    .terms {
-      color: #b9c4c7;
-    }
-
-    .terms-button {
-      color: #b9c4c7;
-      font-size: 0.7rem;
-      text-decoration: underline;
-      margin-top: 0.5rem;
-      text-align: center;
-      width: 100%;
-    }
-
-    .hero-card-image {
-      width: 150px;
-      height: auto;
-    }
-
-    .text-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-      flex: 1;
-      margin-left: 2rem;
-
-      h2 {
-        margin: 0;
-      }
-
-      p {
-        margin: 0;
-        font-size: 1.2rem;
-      }
-    }
-
-    .button-group {
-      flex-shrink: 0;
-    }
-  }
-
-  @media (max-width: 767px) {
-    &.horizontal {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-
-      .hero-card-image {
-        width: 180px;
-      }
-
-      .text-group {
-        margin-left: 0;
-        align-items: center;
-
-        h2,
-        p {
-          text-align: center;
-        }
-      }
-
-      .button-group {
-        margin-top: 1rem;
-      }
-    }
-  }
-
-  @media (max-width: 575px) {
-    .hero-card-image {
-      width: 140px;
-    }
-
-    p {
-      font-size: 1rem;
-    }
   }
 }
 
