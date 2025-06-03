@@ -12,14 +12,15 @@
     &-row {
       display: flex;
       flex-direction: row;
-
       gap: 2rem;
       margin-bottom: 2rem;
       border-bottom: 2px solid #dadce2;
       padding-bottom: 1rem;
       width: 80%;
       box-sizing: border-box;
-
+      // @media (max-width: 767px) {
+      //   display: none !important;
+      // }
       &-browse {
         flex: 1 1 200px;
         min-width: 200px;
@@ -159,84 +160,32 @@
       }
     }
   }
+}
 
-  @media (max-width: 1440px) {
-    .footer-container {
-      width: 90%;
-      margin: 0 auto;
-      padding-top: 2rem;
-    }
+@media (max-width: 1440px) {
+  .footer-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
   }
+}
 
-  @media (max-width: 1280px) {
-    .footer-container {
-      width: 100%;
-      margin: 0 auto;
-      padding-top: 2rem;
-    }
+@media (max-width: 1280px) {
+  .footer-container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
   }
+}
 
-  @media (max-width: 1024px) {
-    .footer-container-row {
-      display: flex;
-    }
+@media (max-width: 1024px) {
+  .footer-container-row {
+    display: flex;
   }
+}
 
-  @media (max-width: 768px) {
-    .footer-container {
-      justify-items: start;
-    }
-    .footer-container-row {
-      display: none;
-    }
-
-    .footer-socials {
-      padding: 1rem;
-    }
-
-    .footer-policies {
-      padding: 1rem;
-    }
-
-    summary {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-      cursor: pointer;
-      padding: 0.75rem 1rem;
-      list-style: none;
-    }
-
-    summary::marker {
-      display: none;
-    }
-
-    summary::after {
-      content: "▼";
-      font-size: 0.75rem;
-      color: #576073;
-      transition: transform 0.3s ease;
-    }
-
-    details[open] summary::after {
-      content: "▲";
-    }
-
-    .browse-columns,
-    .small-box ul {
-      padding-left: 1rem;
-      margin-top: 0.5rem;
-    }
-
-    details > .browse-columns,
-    details > ul {
-      display: block;
-    }
-
-    details {
-      border-bottom: 1px solid #dadce2;
-      margin-bottom: 1rem;
-    }
+@media (max-width: 767px) {
+  .footer-container-row {
+    display: none;
   }
 }

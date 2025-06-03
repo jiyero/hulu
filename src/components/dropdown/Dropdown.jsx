@@ -15,7 +15,6 @@ const Dropdown = ({
         <details className="dropdown-box-details">
           <summary className="dropdown-box-details-summary">Browse</summary>
           <div className="dropdown-box-details-browse">
-            <ul></ul>
             <ul>
               {browseLinks1.map((i) => {
                 return (
@@ -73,8 +72,8 @@ const Dropdown = ({
       </div>
 
       <div className="dropdown-box-about">
-        <details clasName="dropdown-box-about-details">
-          <summary classname="dropdown-box-about-summary">About Us</summary>
+        <details className="dropdown-box-about-details">
+          <summary className="dropdown-box-about-summary">About Us</summary>
           <ul>
             {aboutLinks.map((i) => {
               return (

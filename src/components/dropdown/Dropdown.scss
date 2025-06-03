@@ -6,54 +6,50 @@
   .dropdown {
     display: block;
     width: 100%;
-    &-box {
-      &-details {
-        summary {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-weight: bold;
-          cursor: pointer;
-          padding: 0.75rem 1rem;
-          list-style: none;
 
-          &::marker {
-            display: none;
-          }
+    details {
+      border-bottom: 1px solid #dadce2;
+      margin-bottom: 1rem;
+    }
 
-          &::after {
-            content: "▼";
-            font-size: 0.75rem;
-            color: #576073;
-            transition: transform 0.3s ease;
-          }
-        }
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      list-style: none;
 
-        &[open] summary::after {
-          content: "▲";
-        }
+      &::marker {
+        display: none;
       }
 
-      &-browse,
-      &-help,
-      &-about {
-        padding-left: 1rem;
-        margin-top: 0.5rem;
+      &::after {
+        content: "▼";
+        font-size: 0.75rem;
+        color: #576073;
+        transition: transform 0.3s ease;
+      }
+    }
 
-        ul {
-          padding-left: 1rem;
-          margin-top: 0.5rem;
-          list-style: none;
+    details[open] summary::after {
+      content: "▲";
+    }
 
-          li {
-            margin-bottom: 0.5rem;
-            font-size: 0.85rem;
+    .browse-columns,
+    ul {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      list-style: none;
 
-            a {
-              text-decoration: none;
-              color: #576073;
-            }
-          }
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+
+        a {
+          text-decoration: none;
+          color: #576073;
         }
       }
     }
